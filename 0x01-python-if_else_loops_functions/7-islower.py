@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def islower(c):
-    if c == lowercase:
+    lowercase = c.islower()
+    if lowercase:
         return true
     else:
         return false
