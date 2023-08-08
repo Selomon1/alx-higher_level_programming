@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def uppercase(str):
-    upp_lett = ord(str)
-    if upp_lett >=65 and upp_lett <= 90:
-        return True
-    else:
-        return False
+    for c in str:
+        lett = ord(str[c])
+        if lett >= 97 and lett <= 122:
+            lett = lett - 32
+        print('{:c}'.format(lett), end='')
