@@ -8,4 +8,4 @@ def fizzbuzz():
        elif (mul % 5 == 0):
            print("buzz ", end ="")
        else:
-           print(mul, end="")
+           print("{} ".format(mul), end="")
