@@ -2,10 +2,10 @@
 def fizzbuzz():
     for mul in range(1, 101):
         if (mul % 3 == 0 and  mul % 5 == 0):
-            print("fizzbuzz ", end="")
+            print("FizzBuzz ", end="")
         elif (mul % 3 == 0):
-            print("fizz ", end="")
+            print("Fizz ", end="")
         elif (mul % 5 == 0):
-            print("buzz ", end ="")
+            print("Buzz ", end ="")
         else:
             print("{} ".format(mul), end="")
