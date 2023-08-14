@@ -7,4 +7,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
         for i in range(len(tuple_b), 2):
             len(tuple_b).append(0)
     add_tuple = (tuple_a[0] + tuple_b[0] + tuple_a[1] + tuple_b[1])
-    return add_tuple
+    return tuple(add_tuple)
