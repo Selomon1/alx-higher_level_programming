@@ -3,9 +3,9 @@ def new_in_list(my_list, idx, elements):
     n_list = len(my_list)
     new_list = my_list.copy()
     if idx < 0:
-        return new_list
+        return my_list
     elif idx >= n_list:
-        return new_list
+        return my_list
     else:
-        my_list[idx] = new_elements
+        new_list[idx] = elements
         return new_list
