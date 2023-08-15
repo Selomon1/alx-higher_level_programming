@@ -45,11 +45,11 @@ listint_t *reverse_list(listint_t **head)
 
 	while ((*head) != NULL)
 	{
-		next = *head->next;
-		*head->next = pre;
+		next = (*head)->next;
+		(*head)->next = pre;
 		pre = *head;
 		*head = next;
 	}
-	*head = pre
+	*head = pre;
 	return (*head);
 }
