@@ -21,9 +21,9 @@ int is_palindrome(listint_t **head)
 		second = second->next;
 		first = first->next->next;
 	}
-	second = reverse_list(second);
+	second = reverse_list(&second);
 	first = *head;
-	while ((!first) && (!second))
+	while (first != NULL && second != NULL)
 	{
 		if (first->next != second->next)
 			return (0);
