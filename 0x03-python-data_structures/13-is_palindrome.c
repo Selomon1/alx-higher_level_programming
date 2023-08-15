@@ -17,13 +17,12 @@ int is_palindrome(listint_t **head)
 		return (1);
 	while (1)
 	{
-		*first = *first->next->next;
-		if (*first->next == NULL)
-			start_second = *second->next, break;
-		if (*first == NULL)
-			start_second = *second->next, break;
-		*second = *second->next;
+		first = first->next->next;
+		if (first->next == NULL)
+			start_second = second->next, break;
+		if (first == NULL)
+			start_second = second->next, break;
+		second = second->next;
 	}
-	*second->next = NULL;
-	return (1);
+	second->next = NULL;
 }
