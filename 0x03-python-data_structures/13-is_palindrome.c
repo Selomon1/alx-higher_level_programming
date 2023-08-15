@@ -18,10 +18,10 @@ int is_palindrome(listint_t **head)
 		return (1);
 	while ((!first) && (!second) && !(first->next))
 	{
-		first = first->next->next;
 		second = second->next;
+		first = first->next->next;
 	}
-	second = reverse_list(second);
+	second = reverse_list(&second);
 	first = *head;
 	while ((!first) && (!second))
 	{
