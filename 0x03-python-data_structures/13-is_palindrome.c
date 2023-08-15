@@ -39,7 +39,7 @@ int is_palindrome(listint_t **head)
  * Return: integer
  */
 
-listint_t *reverse_list(listint_t *head)
+listint_t *reverse_list(listint_t **head)
 {
 	listint_t *pre = NULL, *next = *head;
 
