@@ -51,5 +51,5 @@ listint_t *reverse_list(listint_t *head)
 		*head = next;
 	}
 	*head = pre
-	return (pre);
+	return (*head);
 }
