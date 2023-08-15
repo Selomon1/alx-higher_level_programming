@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * is_palindrome - a function that checks if the list is palindrome or not.
@@ -15,16 +16,21 @@ int is_palindrome(listint_t **head)
 		return (1);
 	if ((*head)->next == NULL)
 		return (1);
-	while (1)
+	while ((!first) && (!second) && !(first->next))
 	{
 		first = first->next->next;
-		if (first->next == NULL)
-			start_second = second->next, break;
-		if (first == NULL)
-			start_second = second->next, break;
 		second = second->next;
 	}
-	second->next = NULL;
+	second = reverse_list(&second);
+	first = *head;
+	while(!first && !second)
+	{
+		if (first->next != second->next)
+			return (0);
+		second = second->next;
+		first = first->next;
+	}
+	return (1);
 }
 
 /**
@@ -38,7 +44,7 @@ listint_t *reverse_list(listint_t *head)
 	listint_t *cur, *pre = NULL, *next;
 	cur = head;
 
-	while (cur != NULL)
+	while (cur == NULL)
 	{
 		next = cur->next;
 		cur->next = pre;
