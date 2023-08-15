@@ -1,6 +1,8 @@
 #include "lists.h"
 #include <stdio.h>
 
+listint_t *reverse_list(listint_t **head);
+
 /**
  * is_palindrome - a function that checks if the list is palindrome or not.
  * @head: a pointer
@@ -27,8 +29,8 @@ int is_palindrome(listint_t **head)
 	{
 		if (first->next != second->next)
 			return (0);
-		second = second->next;
 		first = first->next;
+		second = second->next;
 	}
 	return (1);
 }
