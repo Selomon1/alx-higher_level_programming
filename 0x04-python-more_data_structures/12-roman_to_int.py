@@ -4,7 +4,7 @@ def roman_to_int(roman_string):
         return None
     nu = {
         'I': 1,
-        'V': 50,
+        'V': 5,
         'X': 10,
         'L': 50,
         'C': 100,
