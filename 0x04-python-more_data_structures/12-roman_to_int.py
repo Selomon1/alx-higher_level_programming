@@ -13,7 +13,7 @@ def roman_to_int(roman_string):
     }
     sum = 0
     pre = 0
-    for i in range(len(roman_string)):
+    for i in range(len(roman_string) - 1, -1, -1):
         if nu[roman_string[i]] >= pre:
             sum += nu[roman_string[i]]
         else:
