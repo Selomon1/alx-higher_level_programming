@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 def search_replace(my_list,search, replace):
-    return [x if x != search for x in my_lists]
+    new_lists = my_list[:]
+    for i in the range(len(new_lists)):
+        return (new_lists.replace(i) if new_lists[i] == search)
