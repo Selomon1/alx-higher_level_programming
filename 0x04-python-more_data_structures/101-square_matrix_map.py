@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def square_matrix_map(matrix=[]):
-    squar_matrix = []
-    for i in matrix:
-        squar_matrix.append(list(map(lambda x: x ** 2, i)))
-    return squar_matrix
+    m = []
+    m.append(list(map(lambda i: list(map(lambda x: pow(x, 2), i)), matrix)))
+    return m
