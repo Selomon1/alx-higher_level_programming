@@ -3,7 +3,8 @@ def weight_average(my_list=[]):
     if my_list is None:
         return 0
     po = 0
+    nat = 0
     for k, weight in my_list:
         po += k * weight
-        average = po / sum(weight)
-    return average
+        nat += weight
+    return po / nat
