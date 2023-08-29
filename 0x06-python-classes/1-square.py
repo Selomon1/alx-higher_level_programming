@@ -3,6 +3,8 @@
 
 
 class Square():
+    '''square class'''
+
     def __init__(self, size):
         '''Initialize the arguments (the square)
         Args:
