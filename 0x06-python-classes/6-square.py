@@ -5,9 +5,10 @@
 class Square():
     '''square class type'''
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         '''Initialize the argument (square)'''
         self.size = size
+        self.position = position
 
     @property
     def size(self):
