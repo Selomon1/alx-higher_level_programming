@@ -34,7 +34,7 @@ class Square():
         '''update the position of the square'''
         if type(value) != tuple or len(value) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
-        if not all(isinstance(x, int) for x in value) or not all(x >= 0 for x in value):
+        if any(type(x) != int for x in value) or any(x < 0 for x in value):
             raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = value
 
