@@ -4,5 +4,8 @@
 
 class Square():
     def __init__(self, size):
-        '''Initialize the arguments'''
+        '''Initialize the arguments (the square)
+        Args:
+            size (int): sixe of the argument
+        '''
         self.__size = size
