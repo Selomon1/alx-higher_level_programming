@@ -13,6 +13,7 @@ class Rectangle():
     def width(self):
         """ width getter """
         return self.__width
+
     @width.setter
     def width(self, value):
         """ width setter """
@@ -26,6 +27,7 @@ class Rectangle():
     def height(self):
         """ height getter """
         return self.__height
+
     @height.setter
     def height(self, value):
         """ height setter """
@@ -38,6 +40,7 @@ class Rectangle():
     def area(self):
         """ calulate and return the the area of the rectangle """
         return (self.__width * self.__height)
+
     def perimeter(self):
         """ calculate and return the preimeter of the rectangle """
         if self.__width == 0 or self.__height == 0:
