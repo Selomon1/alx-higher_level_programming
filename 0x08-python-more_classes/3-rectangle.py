@@ -55,6 +55,6 @@ class Rectangle():
         rec = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                rec += rec + "#"
-            rec += rec + "\n"
+                rec = rec + "#"
+            rec = rec + "\n"
         return rec[:-1]
