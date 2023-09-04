@@ -61,7 +61,7 @@ class Rectangle():
             for j in range(self.__width):
                 rec = rec + str(self.print_symbol)
             rec = rec + "\n"
-        return rec [:-1]
+        return rec[:-1]
 
     def __repr__(self):
         """ string representing the rectangle """
