@@ -35,6 +35,7 @@ class Rectangle():
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >=0")
+        self.__height = value
 
     def area(self):
         """ calculate and return the area of the rectangle """
@@ -54,6 +55,6 @@ class Rectangle():
         rec = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                rec += "#"
-            rec += "\n"
+                rec += rec + "#"
+            rec += rec + "\n"
         return rec[:-1]
