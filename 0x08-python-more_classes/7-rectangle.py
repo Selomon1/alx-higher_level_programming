@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-""" Define a rectangle """
+""" Define rectangle """
 
 
 class Rectangle():
     """ Rectangle class """
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
-        """ Initialize the width and height of the rectangle """
+        """ Initialize the width and height of the the rectangle """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -46,23 +50,24 @@ class Rectangle():
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return (self.__width * self.__height) * 2
+            return (self.__width + self.__height) * 2
 
     def __str__(self):
-        """ returns the set of the rectangle """
+        """ sets of the rectangle class """
         if self.__width == 0 or self.__height == 0:
             return ""
         rec = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                rec = rec + "#"
+                rec = rec + str(self.print_symbol)
             rec = rec + "\n"
         return rec[:-1]
 
     def __repr__(self):
-        """ string represents the rectangle class """
+        """ string representing the rectangle class """
         return (f"Rectangle({self.__width}, {self.__height})")
-    
+
     def __del__(self):
-        """ delete an instance of rectangle """
+        """ delete the instance of the rectangle """
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1

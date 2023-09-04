@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-""" Define a rectangle """
+""" Define rectangle """
 
 
 class Rectangle():
     """ Rectangle class """
+
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """ Initialize the width and height of the rectangle """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -38,7 +42,7 @@ class Rectangle():
         self.__height = value
 
     def area(self):
-        """ calculate and return the area of the rectangle """
+        """ calculateand return the area of the rectangle """
         return self.__width * self.__height
 
     def perimeter(self):
@@ -46,10 +50,10 @@ class Rectangle():
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return (self.__width * self.__height) * 2
+            return (self.__width + self.__height) * 2
 
     def __str__(self):
-        """ returns the set of the rectangle """
+        """ string set of the rectangle """
         if self.__width == 0 or self.__height == 0:
             return ""
         rec = ""
@@ -60,9 +64,10 @@ class Rectangle():
         return rec[:-1]
 
     def __repr__(self):
-        """ string represents the rectangle class """
+        """ string representing the rectangle """
         return (f"Rectangle({self.__width}, {self.__height})")
-    
+
     def __del__(self):
-        """ delete an instance of rectangle """
+        """ delete the instance of the rectangle """
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
