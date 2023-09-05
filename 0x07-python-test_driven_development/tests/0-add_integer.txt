@@ -1,0 +1,48 @@
+*****************************
+   0-add_integer.py module
+*****************************
+
+This module is a  file that define the addding integers.
+First import from a module:
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Test two integers:
+>>> add_integer(1, 2)
+3
+
+Tests positive and negative integers:
+>>> add_integer(100, -2)
+98
+
+Tests one integer:
+>>> add_integer(2)
+100
+
+Tests float and integer (negative):
+>>> add_integer(100.3, -2)
+98
+
+Test string arg invalid:
+>>> add_integer("a")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Test one string + integer invalid:
+>>> add_integer(4, 'School')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+Test integer + nan invalid:
+>>> add_integer(5, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+Test nan + integer invalid:
+>>> add_integer(None, 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
