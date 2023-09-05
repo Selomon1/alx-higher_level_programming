@@ -6,3 +6,7 @@ class Locked class():
     """ locked class with no class or object attribute """
 
     __slots__ = ["first_name"]
+
+    def __init__(self):
+        """ Initialize """
+        pass
