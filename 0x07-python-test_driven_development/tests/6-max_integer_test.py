@@ -49,6 +49,16 @@ class TestMaxInteger(unittest.TestCase):
         """ Test list including None """
         with self.assertRaises(TypeError):
             result = max_integer([None, 4.5, '4', 'x'])
+    def test_Zero(self):
+        """ Test list of zero """
+        result = max_integer([0, 0, 0, 0, 0])
+        self.assertEqual(result, 0)
+
+    def test_int_float(self):
+        " Test list of integer and float """
+        result = max_integer([2.4, 6, 7.8, 3])
+        self.assertEqual(result, 7.8)
+
 
 if __name__ == '__main__':
     unittest.main()
