@@ -1,6 +1,6 @@
-*********************
-	1-my_list.py
-*****************
+**********************
+1-my_list.py
+**********************
 
 import module:
 >>> MyList = __import__('1-my_list').MyList
@@ -39,3 +39,20 @@ Test Empty list:
 []
 >>> print(my_list)
 []
+
+Test more than 1 argument:
+>>> my_list = MyList([4, 5], [6, 9])
+Traceback (most recent call last):
+...
+TypeError: list expected at most 1 argument, got 2
+
+Test two duplicate integer:
+>>> my_list = MyList()
+>>> my_list.append(4)
+>>> my_list.append(4)
+>>> print(my_list)
+[4, 4]
+>>> my_list.print_sorted()
+[4, 4]
+>>> print(my_list)
+[4, 4]
