@@ -49,3 +49,9 @@ Test flot:
 Traceback (most recent call last):
 ...
 TypeError: xoxo must be an integer
+
+Test string:
+>>> bg.integer_validator("xoxo", "fire")
+Traceback (most recent call last):
+...
+TypeError: fire must be an integer
