@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Public instance of BaseGeometry 
+Public instance of BaseGeometry
 """
 
 
