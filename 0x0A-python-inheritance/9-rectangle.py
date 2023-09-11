@@ -16,7 +16,7 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """ area of the rectangle """
-        return self.__width *self.__height
+        return self.__width * self.__height
 
     def __str__(self):
         """ Represent the set of the string of the rectangle """
