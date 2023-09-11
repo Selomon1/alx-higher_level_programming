@@ -37,3 +37,15 @@ Test for dictionary list:
 Traceback (most recent call last):
 ...
 TypeError: xoxo must be an integer
+
+Test 0 argument:
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test flot:
+>>> bg.integer_validator("xoxo", 4.5)
+Traceback (most recent call last):
+...
+TypeError: xoxo must be an integer
