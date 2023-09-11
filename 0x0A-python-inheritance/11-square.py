@@ -15,5 +15,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """represent the set of string in the rectangle"""
-        return "[{:s}] {:d}/{:d}".format(self.__class__.__name__,
-                                        self.__size, self.__size)
+        return "[{}] {}/{}".format(type(self).__name, self.__size, self.__size)
