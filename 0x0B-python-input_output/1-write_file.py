@@ -6,7 +6,7 @@ def write_file(filename="", text=""):
     """ write string to textfile
     Args:
         filename: the string file name
-        text: written text 
+        text: written text
     Return:
         the number of characters written
     """
