@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ unitest for Base class """
 
-import unitest
+import unittest
 import models.base as base
 
 
-class TestBase(unitest.TestBase):
+class TestBase(unittest.TestBase):
     """ TestBase classs """
     def test_module_doc(self):
         """ documentation test """
@@ -36,7 +36,7 @@ class TestBase(unitest.TestBase):
         i1 = base.Base(None)
         i2 = base.Base()
         self.assertEqual(i1.id, i2.id - 1)
-    
+
     def test_id_for_incr(self):
         """ to test if id incremented by 1 """
         i1 = base.Base()
@@ -84,6 +84,7 @@ class TestBase_to_json_string(unitest.TestCase):
         with self.assertRaises(TypeError):
             base.Base.to_json_string([], 5)
 
+
 class TestBase_from_json_string(unitest.TestCase):
     """ the from_json_string to the method test """
     def test_from_json_string_none(self):
@@ -102,4 +103,4 @@ class TestBase_from_json_string(unitest.TestCase):
 
 
 if __name__ == "__main__":
-    unitest.main()
+    unittest.main()

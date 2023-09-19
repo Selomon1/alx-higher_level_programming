@@ -2,12 +2,12 @@
 """ rectangle class module """
 
 
-import unitest
+import unittest
 import models.base as base
 import models.rectangle as rec
 
 
-class Testrectangle(unitest.TestCase):
+class Testrectangle(unittest.TestCase):
     """ rectangle class test """
     def test_module_doc(self):
         """ documentation module test """
@@ -89,7 +89,7 @@ class Testrectangle(unitest.TestCase):
         """ access private y test """
         with self.assertRaises(AttributeError):
             print(rec.Rectangle(3, 3, 0, 0, 1).__y)
-    
+
     def test_wid_none(self):
         """ width with None test """
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
@@ -172,7 +172,7 @@ class Testrectangle(unitest.TestCase):
 
     def test_x_dict(self):
         """ x argument with dictionary testing """
-        with self.assertRaisesRegex9TypeError, "x must be an integer"):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             rec.Rectangle(5, 6, {"a": 7, "c": 8}, 9)
 
     def test_x_tuple(self):
@@ -189,7 +189,7 @@ class Testrectangle(unitest.TestCase):
         """ y argument with string testing """
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             rec.Rectangle(4, 5, 6, "hello")
-    
+
     def test_y_float(self):
         """ y argument with float testing """
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
@@ -243,4 +243,4 @@ class Testrectangle(unitest.TestCase):
 
 
 if __name__ == "__main__":
-    unitest.main()
+    unittest.main()

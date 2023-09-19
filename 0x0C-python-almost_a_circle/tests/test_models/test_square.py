@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ square class module """
-import unitest
+import unittest
 import models.square as sq
 import models.base as base
 
 
-class TestSquare(unitest.TestCase):
+class TestSquare(unittest.TestCase):
     """ Square class test """
     def test_module_doc(self):
         """ documentation module test """
@@ -163,4 +163,4 @@ class TestSquare(unitest.TestCase):
 
 
 if __name__ = "__main__":
-    unitest.main()
+    unittest.main()
