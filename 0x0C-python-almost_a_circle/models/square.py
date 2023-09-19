@@ -33,7 +33,7 @@ class Square(Rectangle):
         if len(args) > 0:
             for i, argv in enumerate(args):
                 if i < args_len:
-                    self.setattr__(args_li[i], argv)
+                    self.__setattr__(args_li[i], argv)
         else:
             for e, f in kwargs.items():
                 self.__setattr__(e, f)
