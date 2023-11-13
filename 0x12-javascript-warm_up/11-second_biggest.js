@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const numbers = process.argv.slice(2);
 let SecBig = 0;
+const numbers = process.argv.slice(2);
 
 if (numbers.length > 1) {
   numbers.sort();
