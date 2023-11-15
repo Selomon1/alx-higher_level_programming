@@ -6,5 +6,6 @@ for (let key in Odict) {
     Ndict[Odict[key]] = [key];
   } else {
     Ndict[Odict[key]].push(key);
+  }
 }
 console.log(Ndict);
