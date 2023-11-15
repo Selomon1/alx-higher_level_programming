@@ -4,7 +4,7 @@ let Ndict = {};
 for (let key in Odict) {
   if (Ndict[Odict[key]] === undefined) {
     Ndict[Odict[key]] = [key];
-  }
-  Ndict[Odict[key]].push(key);
+  } else {
+    Ndict[Odict[key]].push(key);
 }
 console.log(Ndict);
