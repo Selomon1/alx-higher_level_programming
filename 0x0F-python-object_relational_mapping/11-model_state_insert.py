@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 """
 Script that adds the State object "Lousiana to the data base
 hbtn_0e_6_usa

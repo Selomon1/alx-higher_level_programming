@@ -16,9 +16,10 @@ if __name__ == "__main__":
     engine = create_engine(f"mysql://{argv[1]}:{argv[2]}@localhost:\
             3306/{argv[3]}")
     Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
     state = session.query(State).filter_by(name=argv[4]).first()
-    if state:
+    if state is not None:
         print(str(state.id))
     else:
         print("Not found")
