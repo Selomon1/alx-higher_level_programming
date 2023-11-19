@@ -13,8 +13,13 @@ if __name__ == "__main__":
     da = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3], charset="utf8")
     con = da.cursor()
-    con.execute("SELECT * FROM cities JOIN states \
-                ON cities.states_id = state.id ORDER BY cities.id")
-    [print(", ".join([c[2] for c in con.fetchall() if c[4] == argv[4]]))]
+    sql = """
+    SELECT cities.name FROM cities INNER JOIN states
+    ON cities.states_id = state.id WHERE states.name = %s
+    ORDER BY cities.id ASC
+    """
+    con.execute(sql, (argv[4],))
+    rows = con.fetchall()
+    print(", ".join(c[0] for c in rows)
     con.close()
     da.close()
