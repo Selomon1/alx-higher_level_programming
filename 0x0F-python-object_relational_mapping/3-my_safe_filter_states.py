@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-takes in arguments and displays all values in the states table of 
+takes in arguments and displays all values in the states table of
 hbtn_0e_0_usa matches the argument. But safe from MySQL injections!
 """
 
@@ -15,7 +15,8 @@ if __name__ == "__main__":
     con.execute("SELECT id, name\
                  FROM states\
                  WHERE BINARY name = %s;",
-                 (sys.argv[4],))
+                (sys.argv[4],))
+
     for row in con.fetchall():
         if row[1] == sys.argv[4]:
             print(row)
