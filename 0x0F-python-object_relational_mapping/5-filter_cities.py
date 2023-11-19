@@ -4,7 +4,7 @@ Script that takes in the name of a state as an argument and lists all cities
 of the state using the data base hbtn_0e_4_usa
 """
 
-i
+
 import sys
 from sys import argv
 import MySQLdb
