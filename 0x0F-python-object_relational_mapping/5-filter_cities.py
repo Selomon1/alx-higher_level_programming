@@ -12,10 +12,6 @@ if __name__ == "__main__":
     da = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     con = da.cursor()
-    con.execute("SELECT cities.name FROM cities \
-    JOIN states ON cities.states_id = state.id where states.name = %s \
-    ORDER BY cities.id", (sys.argv[4],))
-    rows = con.fetchall()
-    print(", ".join(city[0] for city in rows))
-    con.close()
-    da.close()
+    con.execute("SELECT *  FROM cities JOIN states \
+                ON cities.states_id = state.id ORDER BY cities.id")
+    [print(", ".join([c[2] for c in con.fetchall() if c[4] == sys.argv[4]]))]
