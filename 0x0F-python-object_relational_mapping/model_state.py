@@ -17,7 +17,6 @@ class State(Base):
     Represents the states
     """
 
-
     __tablename__ = "states"
 
     id = Column(Integer, primary_key=True)
