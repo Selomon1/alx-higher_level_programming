@@ -15,7 +15,7 @@ if __name__ == "__main__":
     con.execute("SELECT cities.name FROM cities \
     JOIN states ON cities.states_id = state.id where states.name = %s \
     ORDER BY cities.id", (sys.argv[4],))
-
-    print(", ".join(city[0] for city in con.fetchall()))
+    rows = con.fetchall()
+    print(", ".join(city[0] for city in rows))
     con.close()
     da.close()
