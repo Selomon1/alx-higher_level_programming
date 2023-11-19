@@ -10,7 +10,7 @@ import sys
 
 if __name__ == "__main__":
     da = MySQLdb.connect(db=sys.argv[3])
-    con = db.cursor()
+    con = da.cursor()
     con.execute("SELECT cities.name FROM states INNER JOIN cities\
                  ON states.id = state_id where states.name = %s;",
                 (sys.argv[4],))
