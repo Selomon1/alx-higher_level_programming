@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that prints the first State object from the database hbtn_0e_6_usa
+Script that prints the State object with name passes as argument from the
+database hbtn_0e_6_usa
 """
 
 
@@ -15,11 +16,10 @@ if __name__ == "__main__":
     engine = create_engine("mysql://{argv[1]}:{argv[2]}@localhost:\
             3306/{argv[3]}")
     Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine)
     session = Session()
-    first_state = session.query(State).first()
-    if first_state is not None:
-        print("{}: {}".format(first_state.id, first_state.name))
+    state = session.query(State).filter_by(name=argv[4]).first()
+    if state:
+        print(str(state.id))
     else:
-        print("Nothing")
+        print("Not found")
     session.close()

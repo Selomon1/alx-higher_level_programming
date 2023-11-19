@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that prints the first State object from the database hbtn_0e_6_usa
+Script that lists all State objects that contain the letter a from the
+database hbtn_0e_6_usa
 """
 
 
@@ -17,9 +18,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    first_state = session.query(State).first()
-    if first_state is not None:
-        print("{}: {}".format(first_state.id, first_state.name))
-    else:
-        print("Nothing")
+    states = session.query(State).filter(State.name.like('%a%')).all()
+    if a_state in states:
+        print("{}: {}".format(a_state.id, a_state.name))
     session.close()
