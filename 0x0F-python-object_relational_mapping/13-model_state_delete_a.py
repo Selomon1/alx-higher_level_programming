@@ -9,7 +9,7 @@ import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import sys
-from sys import srgv
+from sys import argv
 from model_state import Base, State
 
 if __name__ == "__main__":
