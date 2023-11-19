@@ -16,9 +16,9 @@ if __name__ == "__main__":
     engine = create_engine(f"mysql://{argv[1]}:{argv[2]}@localhost:\
             3306/{argv[3]}")
     Base.metadata.create_all(engine)
-    Sesion = sessionmaker(bind=engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name.ilike('%a%')).all()
+    states = session.query(State).filter(State.name.like('%a%'))
     for state in states:
         session.delete(state)
     session.commit()
