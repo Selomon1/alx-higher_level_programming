@@ -14,3 +14,5 @@ if __name__ == "__main__":
                  states.id ORDER BY cities.id;")
     for row in con.fetchall():
         print(row)
+    con.close()
+    da.close()
