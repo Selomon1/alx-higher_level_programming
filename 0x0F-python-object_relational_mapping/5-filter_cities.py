@@ -12,9 +12,8 @@ if __name__ == "__main__":
     da = MySQLdb.connect(db=sys.argv[3])
     con = da.cursor()
     con.execute("SELECT cities.name FROM states INNER JOIN cities \
-                 ON states.id = state_id where states.name = %s;", \
-                (sys.argv[4],))
-    for city in con.fetchall():
-        print(", ".join(city[0])
+    ON states.id = state_id where states.name = %s;", (sys.argv[4],))
+
+    print(", ".join(city[0]) for city in con.fetchall())
     con.close()
     da.close()
