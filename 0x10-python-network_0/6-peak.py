@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Function that finds a peak in a list of unsorted integers
+Module that finds a peak in a list of unsorted integers
 """
 
 
@@ -20,7 +20,8 @@ def find_peak(list_of_integers):
         # checking if the middle element is the peak
         if list_of_integers[mid_point] > list_of_integers[mid_point + 1] and \
            list_of_integers[mid_point] > list_of_integers[mid_point - 1]:
-               return list_of_integers[mid_point]
+            return list_of_integers[mid_point]
+
         # move right if right side is greater
         elif list_of_integers[mid_point] < list_of_integers[mid_point + 1]:
             left = mid_point + 1
