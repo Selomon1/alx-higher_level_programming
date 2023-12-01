@@ -13,4 +13,4 @@ if __name__ == "__main__":
     url = argv[1]
     email = argv[2]
     response = requests.post(url, {'email': email})
-    return response.content
+    print(response.content)
