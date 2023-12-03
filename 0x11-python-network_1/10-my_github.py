@@ -16,4 +16,4 @@ if __name__ == "__main__":
     auth = (argv[1], argv[2])
 
     response = requests.get(url, auth=auth)
-    print(response.json().get('id'))  
+    print(response.json().get('id'))
