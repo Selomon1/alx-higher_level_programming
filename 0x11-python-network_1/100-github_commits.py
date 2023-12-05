@@ -10,10 +10,10 @@ if __name__ == "__main__":
     repository = argv[1]
     owner = argv[2]
     url = f'https://api.github.com/repos/{owner}/{repository}/commits'
-    response = requests.get(url, params={'page': 10})
+    response = requests.get(url)
     commits = response.json()
     try:
-        for comm in commits:
+        for comm in commits[:10]:
             commit = comm['commit']
             sha = comm['sha']
             aut_name = commit['author']['name']
