@@ -9,13 +9,14 @@ from sys import argv
 if __name__ == "__main__":
     repository = argv[1]
     owner = argv[2]
-    url = f'https://api.github.com/repos{owner}/{repository}/commits'
-    response = requests.get(url, params={'per_page': 10})
-    if response.status_code == 200:
-        commits = response.json()
-        for commit in commits:
-            sha = commit['sha']
-            author_name = commit['commit']['author']['name']
-            print(f"{sha}: {author_name}")
-    else:
+    url = f'https://api.github.com/repos/{owner}/{repository}/commits'
+    response = requests.get(url, params={'page': 10})
+    commits = response.json()
+    try:
+        for comm in commits:
+            commit = comm['commit']
+            sha = comm['sha']
+            aut_name = commit['author']['name']
+            print(f"{sha}: {aut_name}")
+    except IndexError:
         pass
