@@ -4,4 +4,4 @@
 # must send a post request with the contents of a file, passed with the filename as second argument of the script
 url=$1
 file=$2
-curl -sX POST -H "Content-Type: application/json" -d "@$file" "$url"
+curl -s POST -H "Content-Type: application/json" -d "@$file" "$url"
