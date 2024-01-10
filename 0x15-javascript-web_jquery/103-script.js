@@ -11,6 +11,7 @@ $(document).ready(function () {
 
   $('#language_code').keypress(function (event) {
     if (event.which === 13) {
+      fetchTranslation();
     }
   });
 });
